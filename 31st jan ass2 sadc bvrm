@@ -1,0 +1,40 @@
+/*t harshavardhini sadc bvrm*/
+
+#include <stdio.h>
+
+int main()
+{
+    int  i,a[10],low,high,mid,c,n,ele;
+    printf("enter array size");
+    scanf("%d",&n);
+    printf("enter array elements");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("enter search ele");
+    scanf("%d",&ele);
+    low=0;
+    high=n-1;
+    while(low<high)
+    {
+        mid=(low+high)/2;
+    
+if(ele==a[mid])
+{
+    c=1;
+    break;
+    
+}
+
+else if(ele<a[mid])
+high=mid-1;
+else
+low=mid+1;
+
+}
+if(c==1)
+printf("element found at position%d",mid);
+else
+printf("element is ot found");
+
+    return 0;
+}
